@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/width_size_40"
+    android:paddingRight="@dimen/width_size_40"
+    tools:context=".android.login.LoginActivity">
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/mHeadIv"
+        android:layout_width="@dimen/width_size_80"
+        android:layout_height="@dimen/width_size_80"
+        android:layout_marginTop="100dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/mAccountLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/width_size_50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mHeadIv"
+        tools:ignore="MissingConstraints">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/mAccountEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_name_hint"
+            android:inputType="textEmailAddress|none"
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_18"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/mPwdLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/width_size_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mAccountLayout"
+        tools:ignore="MissingConstraints">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/mPwdEt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_size_60"
+            android:hint="@string/login_pwd_hint"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_18"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/mLoginBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/login_btn"
+        app:layout_constraintEnd_toEndOf="@+id/mPwdLayout"
+        app:layout_constraintStart_toStartOf="@+id/mPwdLayout"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="@dimen/width_size_20"
+        android:text="@string/login_remember_me"
+        app:layout_constraintEnd_toEndOf="@+id/mPwdLayout"
+        app:layout_constraintTop_toBottomOf="@+id/mPwdLayout" />
+
+    <TextView
+        android:id="@+id/mRegisterTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/width_size_10"
+        android:text="@string/login_register"
+        android:textColor="@color/login_register_tv_color"
+        app:layout_constraintStart_toStartOf="@+id/mLoginBtn"
+        app:layout_constraintTop_toBottomOf="@+id/mLoginBtn"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/mForgetPwdTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/width_size_10"
+        android:text="@string/login_forget_pwd"
+        android:textColor="@color/login_register_tv_color"
+        app:layout_constraintEnd_toEndOf="@+id/mLoginBtn"
+        app:layout_constraintTop_toBottomOf="@+id/mLoginBtn"
+        tools:ignore="MissingConstraints" />
+
+
+</android.support.constraint.ConstraintLayout>

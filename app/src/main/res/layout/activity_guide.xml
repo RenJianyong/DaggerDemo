@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mViewPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+    <TextView
+        android:id="@+id/mNextTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下一步"
+        android:textSize="@dimen/text_size_22"
+        android:textColor="@android:color/white"
+        android:layout_margin="@dimen/width_size_10"
+        android:layout_gravity="right|bottom"
+        android:visibility="gone"/>
+
+</FrameLayout>

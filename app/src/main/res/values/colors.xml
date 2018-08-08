@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#d81e06</color>
+    <color name="colorAccent">#d81e06</color>
+
+    <!-- 主界面radiobutton文字默认颜色 -->
+    <color name="main_rb_text">#2c2c2c</color>
+    <!-- 主界面radiobutton文字选中夜色 -->
+    <color name="main_rb_text_select">#d81e06</color>
+    <color name="main_commodity_name">#d81e06</color>
+
+</resources>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="9">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/splash">
+            </android.support.v4.view.ViewPager>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_gradient"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/width_size_10"
+            android:layout_marginRight="@dimen/width_size_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/scan"
+                android:text="@string/main_scan"
+                android:textSize="@dimen/text_size_10"
+                android:textColor="@android:color/white"/>
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/width_size_13"
+                android:layout_marginLeft="@dimen/width_size_10"
+                android:layout_marginRight="@dimen/width_size_10">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_size_26"
+                    android:background="@android:color/white"
+                    android:drawableLeft="@mipmap/search_icon"
+                    android:drawablePadding="@dimen/width_size_5"
+                    android:paddingLeft="@dimen/width_size_5"
+                    android:gravity="center_vertical"
+                    android:text="@string/main_search_text"/>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_10"
+                android:textColor="@android:color/white"
+                android:drawableTop="@mipmap/message_icon"
+                android:layout_alignParentRight="true"
+                android:text="@string/main_message"/>
+
+        </LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_marginLeft="@dimen/width_size_10"
+            android:layout_marginRight="@dimen/width_size_10"
+            app:cardCornerRadius="@dimen/width_size_5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mMenuRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"></android.support.v7.widget.RecyclerView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="#aaaaaa"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/width_size_10"
+                    android:paddingRight="@dimen/width_size_10"
+                    android:paddingTop="@dimen/width_size_5"
+                    android:paddingBottom="@dimen/width_size_5"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@mipmap/new_icon"
+                        android:drawablePadding="@dimen/width_size_5"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="彭博社长文揭秘雷军创业心路：小米怎么走到今天？"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_16"
+                        android:text="| 更多"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/width_size_10"
+                android:layout_marginTop="@dimen/width_size_10"
+                android:layout_marginBottom="@dimen/width_size_10"
+                android:layout_marginRight="@dimen/width_size_5">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/width_size_5"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/iphone_commodity"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:layout_marginTop="@dimen/width_size_5"
+                        android:text="Apple iPhone 8 Plus 64G 红色特别版 移动联通电信4G手机"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="￥5999.00"
+                        android:textSize="@dimen/text_size_12"
+                        android:textColor="@color/main_commodity_name"/>
+
+                    <TextView
+                        android:id="@+id/mPrice1Tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_12"
+                        android:text="￥6199.00" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/width_size_10"
+                android:layout_marginTop="@dimen/width_size_10"
+                android:layout_marginBottom="@dimen/width_size_10"
+                android:layout_marginLeft="@dimen/width_size_5">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/width_size_5"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/macbook_commodity"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:layout_marginTop="@dimen/width_size_5"
+                        android:text="Apple MacBook Pro 15.4英寸笔记本电脑 i7/16GB/256G"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="￥9999.00"
+                        android:textSize="@dimen/text_size_12"
+                        android:textColor="@color/main_commodity_name"/>
+
+                    <TextView
+                        android:id="@+id/mPriceTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_12"
+                        android:text="￥13999.00" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

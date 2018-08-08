@@ -1,0 +1,39 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="android:ThemeOverlay.Material.Dark.ActionBar">
+        <!-- 隐藏系统标题栏 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- Main theme colors -->
+        <!-- App主题颜色（滑动阴影等）   your app's branding color (for the app bar)-->
+        <item name="android:colorPrimary">#FF6600</item>
+        <!-- 状态栏颜色   darker variant of colorPrimary (for status bar, contextual app bars) -->
+        <item name="android:colorPrimaryDark">#e86053</item>
+        <!-- 控件主题样式（例如EditText，CheckBox，RadioButton等）  theme UI controls like checkboxes and text fields -->
+        <item name="android:colorAccent">#BFDF0F</item>
+        <!-- 系统默认控件样式 -->
+        <!-- 点击时颜色 -->
+        <item name="android:colorControlHighlight">#0000FF</item>
+        <!-- 正常状态下颜色 -->
+        <item name="android:colorControlNormal">#FF0000</item>
+        <!-- 选中时颜色 -->
+        <item name="android:colorControlActivated">#00FF00</item>
+
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.base" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="AppTheme.base.splash" parent="AppTheme.base">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+</resources>

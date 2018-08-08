@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="test"
+            type="com.rjy.dagger.entity.Test" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{test.name}"/>
+
+        <TextView
+            android:id="@+id/mTestName"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/colorAccent"
+            android:text="@{test.name}"
+            android:visibility="@{test.visible?View.VISIBLE:View.GONE}"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_size_30"
+            android:background="@color/colorPrimaryDark"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{test.pwd}"/>
+
+        <FrameLayout
+            android:id="@+id/mTestFlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="#EEEEEE"
+            android:padding="@dimen/width_size_20">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/mTestIv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                app:cardCornerRadius="25dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/user_icon" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/mTestIv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                app:cardCornerRadius="25dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/user_select_icon" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/mTestIv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                app:cardCornerRadius="25dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/search_icon" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/mTestIv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                app:cardCornerRadius="25dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/search_icon" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                app:cardCornerRadius="25dp">
+
+                <ImageView
+                    android:id="@+id/mTestIv3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/ic_launcher_round" />
+
+            </android.support.v7.widget.CardView>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</layout>
