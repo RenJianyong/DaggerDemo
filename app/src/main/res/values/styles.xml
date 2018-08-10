@@ -29,10 +29,10 @@
 
     <style name="AppTheme.base" parent="AppTheme">
         <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowBackground">@mipmap/splash</item>
     </style>
 
     <style name="AppTheme.base.splash" parent="AppTheme.base">
-        <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
 

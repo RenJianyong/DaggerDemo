@@ -2,8 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@android:color/white">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +18,7 @@
             <android.support.v4.view.ViewPager
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@mipmap/splash">
+                android:background="@android:color/transparent">
             </android.support.v4.view.ViewPager>
 
             <View
@@ -91,17 +90,20 @@
             android:layout_weight="2"
             android:layout_marginLeft="@dimen/width_size_10"
             android:layout_marginRight="@dimen/width_size_10"
+            android:background="@android:color/transparent"
             app:cardCornerRadius="@dimen/width_size_5">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@android:color/transparent"
                 android:orientation="vertical">
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/mMenuRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"></android.support.v7.widget.RecyclerView>
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"></android.support.v7.widget.RecyclerView>
 
                 <View
                     android:layout_width="match_parent"
@@ -154,6 +156,7 @@
                 android:layout_weight="1"
                 android:layout_marginLeft="@dimen/width_size_10"
                 android:layout_marginTop="@dimen/width_size_10"
+                android:background="@android:color/transparent"
                 android:layout_marginBottom="@dimen/width_size_10"
                 android:layout_marginRight="@dimen/width_size_5">
                 <LinearLayout

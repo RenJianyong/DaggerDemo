@@ -39,9 +39,11 @@ class RetrofitFactory private constructor(){
         retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(ScalarsConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .client(httpClient)
                 .build()
+
     }
 
     fun <T> create(service:Class<T>):T{

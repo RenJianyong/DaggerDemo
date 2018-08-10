@@ -2,17 +2,17 @@ package com.rjy.http.retrofit
 
 import android.content.Context
 import android.text.TextUtils
-import android.util.Log
 import com.google.gson.Gson
 import com.rjy.http.ext.execute
 import com.rjy.http.rx.BaseSuscriber
 import com.rjy.http.encry.EncryListener
 import com.rjy.http.entity.MessageEntity
+import com.rjy.http.retrofit.callback.LoadCallback
 import com.rjy.http.retrofit.callback.HttpCallback
 import okhttp3.MediaType
 import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import org.jetbrains.anko.AnkoLogger
-import org.json.JSONObject
 import rx.Observable
 import rx.functions.Func1
 
@@ -31,15 +31,17 @@ class HttpUtil<T:MessageEntity> constructor(val mContext: Context, val mClassOfT
         header.put("requestHeadMsgId","000"+System.currentTimeMillis());
     }
 
+
+
     fun register(): HttpService {
         return RetrofitFactory.instance.create(HttpService::class.java)
     }
 
     fun post(httpCallback: HttpCallback<T>) {
         val requestBody: RequestBody = RequestBody.create(MediaType.parse("text/plain;charset=utf-8"), mParams)
-        register().post(header, mUrl, requestBody)
-                .flatMap(object : Func1<String, Observable<T>> {
-                    override fun call(t: String): Observable<T> {
+        register().post<T>(mUrl, requestBody)
+                .flatMap(object : Func1<T, Observable<T>> {
+                    override fun call(t: T): Observable<T> {
                         val fromJson = Gson().fromJson(t.toString(), mClassOfT)
                         return Observable.just(fromJson)
                     }
@@ -65,6 +67,16 @@ class HttpUtil<T:MessageEntity> constructor(val mContext: Context, val mClassOfT
                         //失败
                         httpCallback.onFail("-1","网络请求失败")
                     }
+                })
+    }
+
+    fun download(downloadCallback: LoadCallback){
+        register().download("")
+                .flatMap(object : Func1<ResponseBody,Observable<Boolean>>{
+                    override fun call(t: ResponseBody?): Observable<Boolean> {
+                        return Observable.just(true)
+                    }
+
                 })
     }
 

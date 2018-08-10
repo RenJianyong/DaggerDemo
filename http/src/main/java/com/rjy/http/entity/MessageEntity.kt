@@ -1,6 +1,6 @@
 package com.rjy.http.entity
 
-open class MessageEntity{
+open class  MessageEntity{
     var STATUS:String = ""
-    var MSG:String=""
+    var MSG:String= ""
 }

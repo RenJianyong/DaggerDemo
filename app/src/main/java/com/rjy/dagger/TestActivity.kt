@@ -14,6 +14,7 @@ import com.rjy.http.retrofit.HttpUtil
 import org.jetbrains.anko.toast
 
 
+
 class TestActivity : AppCompatActivity() {
 
     var mFloat:Boolean = true
